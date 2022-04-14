@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Wedding-Gwen&Sébastien</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        function password(){
+            var mdp = '270822'; // Le mdp pour accéder au site
+            var testV=1;
+            var pass1 = prompt('Veuillez entrer le mdp pour accéder au site \nPlease enter the password to go to the website', '');
+            while (testV < 3) {
+                if(!pass1) history.go(-1);
+                if (pass1 == mdp) {
+                    alert ('Mdp correct, Vous pouvez accéder au site \nCorrect, go to the website','');
+                    window.location.href = 'Accueil.html';
+                    break;
+                }
+                testV += 1;
+                var pass1 = prompt('Le mdp est incorrect, entrer le bon mdp \nWrong, please enter the correct password','');
+            }
+            if (pass1 != mdp & testV == 3) {
+                hystory.go(-1);
+                return ' ';
+            }
+        };
+        document.write(password());
+    </script>
+
+  </body>
+</html>
